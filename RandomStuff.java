@@ -20,12 +20,12 @@ public class RandomStuff {
 
 		//range -3 to 8 : 12 possible numbers
 		// Typecasting Math.random (so need extra parenthesis): System.println((int)Math.random()*12-3);
-		System.println((int)(Math.random()*12-3));
-		Syste.println(rand.nextInt(12)-3);
+		System.out.println((int)(Math.random()*12-3));
+		System.out.println(rand.nextInt(12)-3);
 
 		//Range 13 to 27:
-		System.println((int)(Math.random()*15+13));
-		System.println(rand.nextInt(15)+13);
+		System.out.println((int)(Math.random()*15+13));
+		System.out.println(rand.nextInt(15)+13);
 
 
     }

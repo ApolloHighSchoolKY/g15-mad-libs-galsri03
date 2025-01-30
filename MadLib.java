@@ -40,10 +40,13 @@ public class MadLib
 		{
 			//Read the different parts of the story and concatenate the resulting
 			//story using the symbols to tell you the parts of speech
-			Scanner reader = new Scanner(new File(fileName));
-			StringBuilder storyBuilder = new StringBuilder();
+			Scanner reader = new Scanner(new File("story.dat"));
+			String builder = "";
+			String word = "";
+
+
 			while (reader.hasNext()) {
-                String word = reader.next();
+				word = reader.next();
 				if (word.equals("#"))
 					story += getRandomNoun() + "";
 				else if (word.equals("@"))
@@ -76,7 +79,7 @@ public class MadLib
 		{
 			Scanner reader = new Scanner(new File("nouns.dat"));
 			while(reader.hasNext())
-			nouns.add(reader.next());
+				nouns.add(reader.next());
 		}
 		catch(Exception e)
 		{
@@ -89,7 +92,9 @@ public class MadLib
 	{
 		try
 		{
-
+			Scanner reader = new Scanner(new File("verbs.dat"));
+			while(reader.hasNext())
+			verbs.add(reader.next());
 		}
 		catch(Exception e)
 		{
@@ -101,7 +106,9 @@ public class MadLib
 	{
 		try
 		{
-
+			Scanner reader = new Scanner(new File("adjectives.dat"));
+			while(reader.hasNext())
+			adjectives.add(reader.next());
 		}
 		catch(Exception e)
 		{
@@ -111,17 +118,22 @@ public class MadLib
 
 	public String getRandomVerb()
 	{
-		return "";
+		int spot = Math.random()*verbs.size();
+		return "" + verbs.get(spot);
 	}
 
 	public String getRandomNoun()
 	{
-		return "";
+		int spot = Math.random()*verbs.size();
+		return "" + nouns.get(spot);
+
+
 	}
 
 	public String getRandomAdjective()
 	{
-		return "";
+		int spot = 	System.out.println((int)(Math.random()*verbs.size();
+		return "" + adjectives.get(spot);
 	}
 
 	public String toString()
